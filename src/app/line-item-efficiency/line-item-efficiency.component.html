@@ -1,0 +1,63 @@
+<!-- <mat-progress-bar mode="indeterminate" *ngIf="showProgress">
+</mat-progress-bar> -->
+<div class="col-md-12" *ngIf="dataObj">
+  <div class='card'>
+    <div class="card-body">
+      <button type="button" routerLink="/home/dashboard" style="width:150px;margin-bottom: 10px;" class="btn btn-outline-primary">Back</button>
+      <div class="card-header">
+        <div class="row">
+
+          <strong class="card-title">
+            <h3>{{selectedLineItem}}</h3>
+          </strong>
+          <button type="button" class="btn btn-secondary" (click)="exportCSV()">Export CSV</button>
+        </div>
+
+      </div>
+      <table class="table table-bordered">
+        <!-- <table id="bootstrap-data-table" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="bootstrap-data-table_info"> -->
+        <thead class="thead-dark">
+          <tr>
+            <th *ngFor="let item of headers">{{item}}</th>
+          </tr>
+        </thead>
+        <!-- <tfoot>
+          <tr>
+            <td>Total</td>
+            
+          </tr>
+        </tfoot> -->
+        <tbody>
+          <tr *ngFor="let item of dataObj">
+            <td>{{item.cost_head}}</td>
+            <td>{{item.line_item}}</td>
+            <td>{{item.units}}</td>
+            <td>{{item.nos}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.client_rate}}</td>
+            <td>{{item.client_cost}}</td>
+            <td *ngIf="selectedEfficincy === 'Aggressive_Efficiencies'">
+              {{item.benchmark_rate_max}}</td>
+            <td *ngIf="selectedEfficincy !== 'Aggressive_Efficiencies'">
+              {{item.benchmark_rate_min}}</td>
+            <td *ngIf="selectedEfficincy === 'Aggressive_Efficiencies'">
+              {{item.benchmark_cost_max}}</td>
+            <td *ngIf="selectedEfficincy !== 'Aggressive_Efficiencies'">
+              {{item.benchmark_cost_min}} </td>
+            <td *ngIf="selectedEfficincy === 'Aggressive_Efficiencies'">
+              {{item.efficiency_value_max}}</td>
+            <td *ngIf="selectedEfficincy !== 'Aggressive_Efficiencies'">
+              {{item.efficiency_value_min}} </td>
+            <td *ngIf="selectedEfficincy === 'Aggressive_Efficiencies'">
+              {{item.efficiency_per_max}}</td>
+            <td *ngIf="selectedEfficincy !== 'Aggressive_Efficiencies'">
+              {{item.efficiency_per_min}} </td>
+            <td>{{item.observations}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

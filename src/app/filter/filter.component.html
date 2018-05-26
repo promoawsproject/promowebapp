@@ -1,0 +1,87 @@
+<div class="col-sm-12">
+  <div class="sufee-alert alert with-close alert-dark alert-dismissible fade show" role="alert">
+   <!--SOF Brand
+    <mat-form-field style="width:110px;">
+      <mat-select  [disabled]='true' placeholder="Brand" [(value)]="selectedBrand" (change)="onFilterSelected('brand',$event)">
+        <mat-option *ngFor="let item of brands" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;&nbsp;-->
+    <!--EOF Brand -->
+    <!-- SOF Product
+    <mat-form-field  style="width:110px;">
+      <mat-select [disabled]="true" placeholder="Product" [(value)]="selectedProduct" (change)="onFilterSelected('products',$event)">
+        <mat-option *ngFor="let item of products" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;&nbsp;-->
+    <!-- EOF Product -->
+    <!-- SOF SBU -->
+    <mat-form-field  style="width:110px;">
+      <mat-select [disabled]="disable" placeholder="Business Unit" [(value)]="selectedSBU" (change)="onFilterSelected('sbus',$event)">
+        <mat-option *ngFor="let item of sbus" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;&nbsp;
+    <!-- EOF SBU -->
+     <!-- SOF Project Title-->
+     <mat-form-field>
+      <mat-select [disabled]='disable' placeholder="Project Title" [(value)]="selectedProTitle" (change)="onFilterSelected('project_title',$event)">
+        <mat-option *ngFor="let item of projectTitles" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;&nbsp;
+    <!-- EOF Project Title -->
+    <!-- SOF Film Desc-->
+    <mat-form-field>
+      <mat-select [disabled]='disable' placeholder="Film Discription" [(value)]="selectedFilmDesc" (change)="onFilterSelected('filmdesc',$event)">
+        <mat-option *ngFor="let item of filmDescs" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- EOF Film Desc -->
+     <!-- SOF Timeline-->
+     <mat-form-field>
+        <mat-select [disabled]='disable' placeholder="Project Urgency" [(value)]="selectedTimeline" (change)="onFilterSelected('timeline',$event)">
+          <mat-option *ngFor="let item of timelines" [value]="item">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- EOF Timeline -->
+    <!-- SOF Cost Option-->
+    <mat-form-field>
+      <mat-select [disabled]='disable' placeholder="Production House" [(value)]="selectedCostOption" (change)="onFilterSelected('cost_option',$event)">
+        <mat-option *ngFor="let item of costOptions" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    &nbsp;&nbsp;
+    <!-- EOF Cost Option -->
+    <!-- SOF Category-->
+    <!-- <mat-form-field [hidden]='hiddenCategory' >
+      <mat-select [disabled]='!disable' placeholder="Category" [(value)]="selectedCategory" (change)="onFilterSelected('category',$event)" hidden="true" [hidden]='hiddenCategory' >
+        <mat-option *ngFor="let item of categories" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+    <!-- EOF Category -->
+    <!-- <button type="button" [disabled]='disable' class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
+    <button type="button" [disabled]='disable' style="margin-left: 10px;" class="btn btn-primary" (click)="onApply()">
+     Apply
+    </button>
+  </div>
+</div>

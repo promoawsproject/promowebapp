@@ -1,0 +1,70 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "star-app"
+  },
+  "apps": [{
+    "root": "src",
+    "outDir": "dist",
+    "assets": [
+      "assets",
+      "favicon.ico"
+    ],
+    "index": "index.html",
+    "main": "main.ts",
+    "polyfills": "polyfills.ts",
+    "test": "test.ts",
+    "tsconfig": "tsconfig.app.json",
+    "testTsconfig": "tsconfig.spec.json",
+    "prefix": "app",
+    "styles": [
+      "styles.css",
+      "assets/css/lib/datatable/dataTables.bootstrap.min.css"
+
+    ],
+    "scripts": ["app/js/jquery.min.js",
+      "app/js/jquery-3.2.1.slim.min.js",
+      "app/js/highstock.js",
+      "app/js/highcharts-more.js",
+      "app/dashboard/cost_pie_chart.js",
+      "app/dashboard/cost_deviation_chart.js",
+      "app/dashboard/test.js",
+      "app/graphs/cost_deviation_graph.js",
+      "app/dashboard/cost_range_deviatoin_chart.js",
+      "app/graphs/sparkline.js",
+      "app/graphs/sparkline_new.js"
+    ],
+    "environmentSource": "environments/environment.ts",
+    "environments": {
+      "dev": "environments/environment.ts",
+      "prod": "environments/environment.prod.ts"
+    }
+  }],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [{
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

@@ -1,0 +1,96 @@
+<!-- <div class="col-sm-6 col-lg-3">
+  <div class='card'>
+    <div class="card-body">
+      <button type="button" class="btn btn-link" (click)="onChartClick('Passive_Efficiencies')">Passive Efficiencies</button>
+      <div id="container1"></div>
+      <div *ngIf="data" style="font-size: .8em;">
+        <div>Client Cost:&nbsp;{{data.client_cost}}</div>
+        <div>Benchmark Cost:&nbsp;{{data.pe_benchmark}}</div>
+        <div>Efficiency Value:&nbsp;{{data.pe_efficiency}} </div>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+<!--/.col-->
+<!-- <div class="col-sm-6 col-lg-3">
+  <div class='card'>
+    <div class="card-body">
+      <button type="button" class="btn btn-link" (click)="onChartClick('Aggressive_Efficiencies')">Aggressive Efficiencies</button>
+      <div id="container2"></div>
+      <div *ngIf="data" style="font-size: .8em;">
+        <div>Client Cost:&nbsp;{{data.client_cost}}</div>
+        <div>Benchmark Cost:&nbsp;{{data.ae_benchmark}}</div>
+        <div>Efficiency Value:&nbsp;{{data.ae_efficiency}} </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!--/.col-->
+<!-- <div class="col-sm-6 col-lg-12" style="height: 500px;overflow: scroll;">
+  <div class='card'>
+    <div class="card-body">
+      <div>
+        <h4>Observation Summary</h4>
+      </div>
+
+      <table class="table">
+
+        <thead class="thead-dark">
+          <tr>
+            <th>
+              Cost Head
+            </th>
+            <th>
+              Observations
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of observationsByCostHead">
+            <th>{{item.title}}</th>
+            <th>
+              <li *ngFor="let ob of item.obser">{{ob}}</li>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div> -->
+<div class="col-sm-6 col-lg-2">
+
+</div>
+<div class="col-sm-6 col-lg-8">
+  <div class='card'>
+    <div class="card-body" style="background-color: #FDC611;">
+
+      <div class="col-sm-5">
+          <img class="align-content" src="assets/images/logo.jpg" style="width:250px;height:200px;" alt="">
+      </div>
+      <div class="col-sm-7" style="height:200px;">
+        <div class="row" style="top:0;padding-top: 1.2em;height:100px;">
+          <label style="font-size: 2em;"> What would you like to review?</label>
+
+        </div>
+        <div class="row" style="height: 100px;">
+          <div class="col-sm-6" style="bottom:0;margin-top:1.2em;">
+            <button type="submit"  style="background-color: black;color:white;font-size: 1.2em;left:0;" class="btn btn-flat m-b-30 m-t-30">Project</button>
+          </div>
+          <div class="col-sm-6" style="bottom:0;margin-top:1.2em; ">
+            <button type="submit" style="background-color: black;color:white;font-size: 1.2em;right: 0;" class="btn btn-flat m-b-30 m-t-30">Trends</button>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="col-sm-6 col-lg-2">
+
+</div>
+
+<!-- style="background-color: #FDC611;height: 760px;"-->
