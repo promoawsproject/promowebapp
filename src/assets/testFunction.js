@@ -7,11 +7,11 @@ exports.handler = (event, context, callback) => {
     var mysql = require('mysql');
 
     var con = mysql.createConnection({
-        host: "mysqldbinstance.cysrvxxuaaap.us-east-1.rds.amazonaws.com",
-        user: "admin",
-        password: "Passw0rd",
+        host: "",
+        user: "",
+        password: "",
         port: 3306,
-        database: 'masterdb'
+        database: ''
     });
 
     con.connect();
